@@ -1,0 +1,41 @@
+{
+    "name": "kimhf/advanced-custom-fields-stubs",
+    "description": "Stubs for the Advanced Custom Fields WordPress plugin, used for static analysis.",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "keywords": [
+        "wordpress",
+        "advanced custom fields",
+        "static analysis"
+    ],
+    "support": {
+        "issues": "https://github.com/kimhf/advanced-custom-fields-stubs/issues",
+        "source": "https://github.com/kimhf/advanced-custom-fields-stubs"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kim Helge Frimanslund",
+            "homepage": "https://github.com/kimhf"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "giacocorsiglia/stubs-generator": "^0.5",
+        "wpackagist-plugin/advanced-custom-fields": "5.8.7"
+    },
+    "scripts": {
+        "generate-stubs": "generate-stubs --finder=advanced-custom-fields-finder.php --nullify-globals --out=advanced-custom-fields-stubs.php --force"
+    },
+    "extra": {
+        "installer-paths": {
+            "plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ]
+        }
+    }
+}
